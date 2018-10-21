@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shablon.crud.mapper.UserMapper">
+
+    <resultMap id="userMap" type="Users" autoMapping="true">
+    </resultMap>
+
+    <sql id="getAll">
+select
+       users.id,
+       users.username,
+       users.password,
+       users.role
+from users
+    </sql>
+
+    <sql id="filter">
+        <where>
+            <if test="map != null">
+                <if test="map.roles != null and map.roles instanceof java.util.Collection and map.roles.size() > 0">
+                    and role in
+                    <foreach item="item" index="index" collection="map.roles" open="(" separator="," close=")">
+                        '${item}'
+                    </foreach>
+                </if>
+            </if>
+        </where>
+    </sql>
+
+    <sql id="page">
+        <if test="map.page != null and map.size != null">
+            offset ((#{map.page}::integer -1) * #{map.size}::integer)
+            limit #{map.size}::integer
+        </if>
+    </sql>
+
+    <select id="getAll" resultType="Users" parameterType="map">
+        <include refid="getAll"/>
+        <include refid="filter"/>
+        <include refid="page"/>
+        ;
+    </select>
+    <select id="getCount" resultType="Long" parameterType="map">
+        select count(*) from users
+        <include refid="filter"/>
+        ;
+    </select>
+</mapper>
