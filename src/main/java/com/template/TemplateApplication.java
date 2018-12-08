@@ -1,11 +1,11 @@
-package com.shablon;
+package com.template;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ShablonApplication {
+public class TemplateApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ShablonApplication.class, args);
+        SpringApplication.run(TemplateApplication.class, args);
     }
 }

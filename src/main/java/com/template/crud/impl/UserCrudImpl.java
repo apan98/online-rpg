@@ -1,9 +1,9 @@
-package com.shablon.crud.impl;
+package com.template.crud.impl;
 
-import com.shablon.crud.UserCrud;
-import com.shablon.crud.jpa.UsersRepository;
-import com.shablon.crud.mapper.UserMapper;
-import com.shablon.domain.model.Users;
+import com.template.crud.UserCrud;
+import com.template.crud.jpa.UsersRepository;
+import com.template.crud.mapper.UserMapper;
+import com.template.domain.model.Users;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

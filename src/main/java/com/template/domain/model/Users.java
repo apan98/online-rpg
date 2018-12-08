@@ -1,4 +1,4 @@
-package com.shablon.domain.model;
+package com.template.domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

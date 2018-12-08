@@ -1,10 +1,10 @@
-package com.shablon.controller;
+package com.template.controller;
 
 
-import com.shablon.crud.UserCrud;
-import com.shablon.domain.constant.RestConstant;
-import com.shablon.domain.model.Users;
-import com.shablon.service.UtilsController;
+import com.template.crud.UserCrud;
+import com.template.domain.constant.RestConstant;
+import com.template.domain.model.Users;
+import com.template.service.UtilsController;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

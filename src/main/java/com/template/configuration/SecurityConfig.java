@@ -1,4 +1,4 @@
-package com.shablon.configuration;
+package com.template.configuration;
 
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

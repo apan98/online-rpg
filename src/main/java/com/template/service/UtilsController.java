@@ -1,4 +1,4 @@
-package com.shablon.service;
+package com.template.service;
 
 import java.util.Map;
 

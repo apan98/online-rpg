@@ -1,4 +1,4 @@
-package com.shablon.service;
+package com.template.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
-package com.shablon.crud;
+package com.template.crud;
 
-import com.shablon.domain.model.Users;
+import com.template.domain.model.Users;
 
 import java.util.HashMap;
 import java.util.List;

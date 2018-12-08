@@ -1,6 +1,6 @@
-package com.shablon.crud.mapper;
+package com.template.crud.mapper;
 
-import com.shablon.domain.model.Users;
+import com.template.domain.model.Users;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;

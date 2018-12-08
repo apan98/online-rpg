@@ -1,10 +1,10 @@
-package com.shablon.configuration;
+package com.template.configuration;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.shablon.crud.UserCrud;
-import com.shablon.domain.model.Users;
+import com.template.crud.UserCrud;
+import com.template.domain.model.Users;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
