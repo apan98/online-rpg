@@ -33,7 +33,7 @@ left join roles on roles.id = users.role_id
     <sql id="pagination">
       <if test="searchRequest.getPage > 0 and searchRequest.getSize > 0"></if>
         offset ((#{searchRequest.page} -1) * #{searchRequest.size})
-        limit #{searchRequest.size};
+        limit #{searchRequest.size}
     </sql>
 
 
@@ -47,6 +47,5 @@ left join roles on roles.id = users.role_id
         <include refid="getAll"/>
         <include refid="filter"/>
         ) as users
-
     </select>
 </mapper>
