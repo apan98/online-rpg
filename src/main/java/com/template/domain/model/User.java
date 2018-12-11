@@ -1,10 +1,10 @@
 package com.template.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -15,23 +15,21 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "users")
-public class Users {
+public class User {
 
-    @Id private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @NotNull private String username;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotNull private String password;
 
-    @Enumerated(value = EnumType.STRING)
+    @ManyToOne
+    @JoinColumn(name = "role_id")
     @NotNull private Role role;
 
-    public enum Role implements GrantedAuthority{
-        ADMIN, USER;
-
-        @Override
-        public String getAuthority() {
-            return name();
-        }
-    }
 }
 
 

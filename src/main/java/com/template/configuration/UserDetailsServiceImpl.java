@@ -1,10 +1,7 @@
 package com.template.configuration;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.template.crud.UserCrud;
-import com.template.domain.model.Users;
+import com.template.dao.UserDao;
+import com.template.domain.model.Role;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,17 +9,20 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Service
 @AllArgsConstructor
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    private UserCrud userCrud;
+    private UserDao userDao;
 
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-        Users user = userCrud.getByUsername(userName);
-        List<Users.Role> roles = new ArrayList<>();
+        com.template.domain.model.User user = userDao.getByUsername(userName);
+        List<Role> roles = new ArrayList<>();
         roles.add(user.getRole());
         return new User(user.getUsername(), user.getPassword(), roles);
     }
