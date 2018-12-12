@@ -1,4 +1,4 @@
-package com.fastCounting.domain.pojo;
+package com.fastCounting.domain.pojo.search;
 
 import com.fastCounting.domain.model.User;
 import lombok.Data;

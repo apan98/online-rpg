@@ -1,19 +1,13 @@
 package com.fastCounting.dao;
 
 import com.fastCounting.domain.model.User;
-import com.fastCounting.domain.pojo.UserSearch;
+import com.fastCounting.domain.pojo.search.UserSearch;
 
-import java.util.List;
-
-public interface UserDao {
+public interface UserDao extends Pagination<User, UserSearch>{
 
     User getById(Long id);
 
     User getByUsername(String username);
-
-    List<User> getAll(UserSearch userSearch);
-    
-    Long getCount(UserSearch userSearch);
 
     void update(User user);
 

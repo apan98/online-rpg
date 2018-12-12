@@ -3,7 +3,8 @@ package com.fastCounting.controller.v1;
 import com.fastCounting.controller.RestConstant;
 import com.fastCounting.dao.UserDao;
 import com.fastCounting.domain.model.User;
-import com.fastCounting.domain.pojo.UserSearch;
+import com.fastCounting.domain.pojo.search.UserSearch;
+import com.fastCounting.utils.ControllerUtils;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -20,6 +21,7 @@ public class UserController {
     private static final String USER = "/{id}";
     private static final String SEARCH = "/search";
 
+    private ControllerUtils controllerUtils;
     private UserDao userDao;
 
     @Secured(RestConstant.ROLE_ADMIN)
@@ -44,9 +46,7 @@ public class UserController {
     @RequestMapping(value = SEARCH, method = RequestMethod.POST)
     ResponseEntity<User> getAll(@RequestBody UserSearch userSearch) {
         HttpHeaders headers = new HttpHeaders();
-        if(userSearch.getPage() > 0 && userSearch.getSize() > 0) {
-            headers.add(RestConstant.TOTAL_COUNT, userDao.getCount(userSearch).toString());
-        }
+        headers.addAll(controllerUtils.getTotalSize(userDao, userSearch));
         return new ResponseEntity(userDao.getAll(userSearch), headers, HttpStatus.OK);
     }
 }

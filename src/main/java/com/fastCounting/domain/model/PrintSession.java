@@ -1,6 +1,5 @@
 package com.fastCounting.domain.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,29 +7,24 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.sql.Time;
 
 @Data
 @Entity
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users")
-public class User {
+@Table(name = "print_session")
+public class PrintSession {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull private String username;
-    @NotNull private Double printingSpeed;
+    @NotNull private Long userId;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @NotNull private String password;
-
-    @ManyToOne
-    @JoinColumn(name = "role_id")
-    @NotNull private Role role;
+    @NotNull private Time time;
+    @NotNull private Long errors;
+    @NotNull private Long textSize;
 
 }
-
-

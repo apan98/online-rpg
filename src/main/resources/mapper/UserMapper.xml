@@ -13,6 +13,7 @@ select
        users.id,
        users.username,
        users.password,
+       users.printing_speed,
        roles.id as roles_id,
        roles.code as roles_code
 from users

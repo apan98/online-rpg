@@ -4,7 +4,7 @@ import com.fastCounting.dao.UserDao;
 import com.fastCounting.dao.jpa.UsersRepository;
 import com.fastCounting.dao.mapper.UserMapper;
 import com.fastCounting.domain.model.User;
-import com.fastCounting.domain.pojo.UserSearch;
+import com.fastCounting.domain.pojo.search.UserSearch;
 import com.fastCounting.validation.UserValidation;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

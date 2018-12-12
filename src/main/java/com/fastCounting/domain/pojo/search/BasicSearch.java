@@ -1,4 +1,4 @@
-package com.fastCounting.domain.pojo;
+package com.fastCounting.domain.pojo.search;
 
 import lombok.Data;
 
