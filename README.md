@@ -1,4 +1,4 @@
-# template
+# TemplateLight
 ENVIROMENT:
 * DB_HOST=localhost
 * DB_PORT=5432
