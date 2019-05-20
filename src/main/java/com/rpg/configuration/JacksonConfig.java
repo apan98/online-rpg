@@ -1,4 +1,4 @@
-package com.TemplateLight.configuration;
+package com.rpg.configuration;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -21,3 +21,5 @@ spring:
     out-of-order: true
     placeholders:
       application_user: ${DB_USER:postgres}
+server:
+  port: 6666

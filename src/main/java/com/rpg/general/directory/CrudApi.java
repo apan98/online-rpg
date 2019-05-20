@@ -1,4 +1,4 @@
-package com.TemplateLight.general.directory;
+package com.rpg.general.directory;
 
 import lombok.NonNull;
 import org.springframework.data.domain.PageRequest;
@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.MappedSuperclass;
 
+/**
+ * Generic api for base operation create, update, delete, get by id, get all, get page
+ * @param <T> model, entity {@link Model}
+ */
 @MappedSuperclass
 public abstract class CrudApi<T extends Model> {
 
@@ -30,12 +34,12 @@ public abstract class CrudApi<T extends Model> {
     }
 
     @PostMapping
-    T create(@RequestBody @NonNull @Validated T t) {
-        return crud.create(t);
+    T create(@RequestBody @NonNull @Validated T model) {
+        return crud.create(model);
     }
 
     @PutMapping
-    T update(@RequestBody @NonNull @Validated T t) {
-        return crud.create(t);
+    T update(@RequestBody @NonNull @Validated T model) {
+        return crud.update(model);
     }
 }

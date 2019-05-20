@@ -1,4 +1,4 @@
-package com.TemplateLight;
+package com.rpg;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

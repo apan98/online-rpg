@@ -1,12 +1,13 @@
-package com.TemplateLight.directory.race.race;
+package com.rpg.directory.race.race;
 
-import com.TemplateLight.general.directory.Crud;
-import com.TemplateLight.general.directory.CrudApi;
+import com.rpg.general.directory.Crud;
+import com.rpg.general.directory.CrudApi;
+import com.rpg.general.directory.Api;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/race")
+@RequestMapping(Api.race)
 public class RaceController extends CrudApi<Race> {
     public RaceController(Crud<Race> crud) {
         super(crud);

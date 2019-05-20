@@ -1,4 +1,4 @@
-package com.TemplateLight.general.directory;
+package com.rpg.general.directory;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -7,6 +7,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import javax.persistence.MappedSuperclass;
 import java.util.List;
 
+/**
+ * Generic dao crud class, with base operation create, update, get by id, get all, get page
+ * @param <T> model, entity {@link Model}
+ */
 @MappedSuperclass
 public abstract class Dao<T extends Model> implements Crud<T>{
     JpaRepository<T, Long> jpaRepository;
