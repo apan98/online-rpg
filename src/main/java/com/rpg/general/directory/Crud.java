@@ -17,8 +17,8 @@ public interface Crud<T extends Model> {
 
     Page<T> getPage(PageRequest pageRequest);
 
-    T create(T T);
+    T create(T model);
 
-    T update(T T);
+    T update(T model);
 
 }
