@@ -13,7 +13,7 @@ spring:
     user: ${DBMIGRATION_USER:postgres}
     password: ${DBMIGRATION_PASS:postgres}
     schemas:
-    - 'public'
+    - 'rpg'
     locations:
     - 'classpath:db/struct'
     - 'classpath:db/data'
@@ -21,5 +21,3 @@ spring:
     out-of-order: true
     placeholders:
       application_user: ${DB_USER:postgres}
-server:
-  port: 6666
