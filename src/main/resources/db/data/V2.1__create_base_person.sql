@@ -1,0 +1,1 @@
+INSERT INTO person (name, surname, lastname, datebirth) VALUES ('Artur', 'Pan', 'Vladislavovich', '1998-12-14');

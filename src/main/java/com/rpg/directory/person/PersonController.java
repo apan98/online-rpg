@@ -1,4 +1,4 @@
-package com.rpg.directory.race;
+package com.rpg.directory.person;
 
 import com.rpg.general.directory.Crud;
 import com.rpg.general.directory.CrudApi;
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(Api.race)
-public class RaceController extends CrudApi<Race> {
-    public RaceController(Crud<Race> crud) {
+@RequestMapping(Api.person)
+public class PersonController extends CrudApi<Person> {
+    public PersonController(Crud<Person> crud) {
         super(crud);
     }
 }

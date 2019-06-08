@@ -1,0 +1,1 @@
+INSERT INTO biography (description, person_id) VALUES ('Создатель этой игры', 1);

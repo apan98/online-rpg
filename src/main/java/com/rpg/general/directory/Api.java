@@ -5,7 +5,8 @@ package com.rpg.general.directory;
  */
 public class Api {
 
-    private final static String API = "/api";
-    public final static String race = API + "/race";
+    public static final String API = "/api";
+    public static final String person = API + "/person";
+    public static final String biography = person + "/biography";
 
 }

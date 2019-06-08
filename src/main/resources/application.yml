@@ -21,7 +21,7 @@ spring:
     schemas:
       - 'rpg'
     locations:
-      - 'classpath:db/struct'
+      - 'classpath:db/base'
       - 'classpath:db/data'
     sqlMigrationPrefix: 'V'
     out-of-order: true

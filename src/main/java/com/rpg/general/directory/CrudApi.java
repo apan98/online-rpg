@@ -47,12 +47,12 @@ public abstract class CrudApi<T extends Model> {
     }
 
     @PostMapping
-    T create(@RequestBody @NonNull @Validated T model) {
-        return crud.create(model);
+    ResponseEntity<T> create(@RequestBody @NonNull @Validated T model) {
+        return new ResponseEntity<>(crud.create(model), HttpStatus.OK);
     }
 
     @PutMapping
-    T update(@RequestBody @NonNull @Validated T model) {
-        return crud.update(model);
+    ResponseEntity<T> update(@RequestBody @NonNull @Validated T model) {
+        return new ResponseEntity<>(crud.update(model), HttpStatus.OK);
     }
 }

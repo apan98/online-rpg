@@ -1,11 +1,11 @@
-package com.rpg.directory.race;
+package com.rpg.directory.person;
 
 import com.rpg.general.directory.Dao;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class RaceDao extends Dao<Race> {
-    public RaceDao(RaceRepository repository) {
+public class PersonDao extends Dao<Person> {
+    public PersonDao(PersonRepository repository) {
         super(repository);
     }
 }
