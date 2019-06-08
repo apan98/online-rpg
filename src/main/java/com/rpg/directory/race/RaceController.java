@@ -1,4 +1,4 @@
-package com.rpg.directory.race.race;
+package com.rpg.directory.race;
 
 import com.rpg.general.directory.Crud;
 import com.rpg.general.directory.CrudApi;

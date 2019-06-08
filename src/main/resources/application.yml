@@ -2,21 +2,27 @@ spring:
   jpa:
     properties:
       hibernate.temp.use_jdbc_metadata_defaults: false
-      database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+      database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:postgres}?application_name=postgres
     username: ${DB_USER:postgres}
     password: ${DB_PASS:postgres}
+    hikari:
+      schema: 'rpg'
   flyway:
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:postgres}?application_name=postgres
     user: ${DBMIGRATION_USER:postgres}
     password: ${DBMIGRATION_PASS:postgres}
     schemas:
-    - 'rpg'
+      - 'rpg'
     locations:
-    - 'classpath:db/struct'
-    - 'classpath:db/data'
+      - 'classpath:db/struct'
+      - 'classpath:db/data'
     sqlMigrationPrefix: 'V'
     out-of-order: true
     placeholders:

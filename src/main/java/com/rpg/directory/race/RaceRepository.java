@@ -1,4 +1,4 @@
-package com.rpg.directory.race.race;
+package com.rpg.directory.race;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
