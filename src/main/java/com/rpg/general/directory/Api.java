@@ -1,12 +1,13 @@
 package com.rpg.general.directory;
 
 /**
- * API path for {@link org.springframework.web.bind.annotation.RestController}
+ * api path for {@link org.springframework.web.bind.annotation.RestController}
  */
 public class Api {
 
-    public static final String API = "/api";
-    public static final String person = API + "/person";
-    public static final String biography = person + "/biography";
+    private static final String api = "/api";
+    public static final String person = api + "/person";
+    public static final String biography = api + "/biography";
+    public static final String country = api + "/country";
 
 }
