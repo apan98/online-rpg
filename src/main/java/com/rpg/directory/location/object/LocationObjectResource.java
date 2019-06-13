@@ -9,8 +9,8 @@ import javax.persistence.*;
 @Table(name = "location_object_resource")
 public class LocationObjectResource extends Model {
 
-    @Column(name = "location_object_id")
-    public Long locationObjectId;
+//    @Column(name = "location_object_id")
+//    public Long locationObjectId;
 
     @ManyToOne
     public Resource resource;

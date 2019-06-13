@@ -1,9 +1,14 @@
 package com.rpg.directory.person;
 
+import com.rpg.directory.person.character.PersonCharacter;
 import com.rpg.general.directory.Model;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 public class Person extends Model {
@@ -15,5 +20,11 @@ public class Person extends Model {
     public String surname;
 
     public String lastName;
+
+    @ManyToMany
+    @JoinTable(name = "person_character",
+            joinColumns = { @JoinColumn(name = "person_id")},
+            inverseJoinColumns = { @JoinColumn(name = "character_id")})
+    public List<PersonCharacter> personCharacters;
 
 }
