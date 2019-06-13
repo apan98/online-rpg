@@ -1,6 +1,7 @@
 package com.rpg.directory.person;
 
 import com.rpg.directory.person.character.PersonCharacter;
+import com.rpg.directory.person.skill.PersonSkill;
 import com.rpg.general.directory.Model;
 
 import javax.persistence.Entity;
@@ -26,5 +27,11 @@ public class Person extends Model {
             joinColumns = { @JoinColumn(name = "person_id")},
             inverseJoinColumns = { @JoinColumn(name = "character_id")})
     public List<PersonCharacter> personCharacters;
+
+    @ManyToMany
+    @JoinTable(name = "person_skill",
+            joinColumns = { @JoinColumn(name = "person_id")},
+            inverseJoinColumns = { @JoinColumn(name = "skill_id")})
+    public List<PersonSkill> personSkills;
 
 }
