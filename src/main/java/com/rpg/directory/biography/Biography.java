@@ -16,5 +16,5 @@ public class Biography extends Model {
     public Person person;
 
     @ManyToOne
-    public Fraction homeland;
+    public Fraction fraction;
 }

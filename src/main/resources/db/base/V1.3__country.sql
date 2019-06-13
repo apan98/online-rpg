@@ -4,4 +4,4 @@ create table fraction (
     description varchar not null
 );
 
-alter table biography add column homeland_id bigint references fraction(id);
+alter table biography add column fraction_id bigint references fraction(id);
