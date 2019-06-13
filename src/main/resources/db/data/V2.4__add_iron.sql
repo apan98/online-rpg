@@ -8,3 +8,5 @@ INSERT INTO rpg.location (name, description, country_id)
 VALUES ('Лесок', 'Небольшой лес', 1);
 INSERT INTO rpg.location (name, description, country_id)
 VALUES ('Деревня Рори', 'Небольшая деревня', 1);
+INSERT INTO rpg.resource (name, description, density, rarity, type_id)
+VALUES ('Свинец', 'Тяжелый метал', 600, 15, 1);
