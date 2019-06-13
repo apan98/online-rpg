@@ -1,4 +1,4 @@
-package com.rpg.directory.country;
+package com.rpg.directory.fraction;
 
 import com.rpg.general.directory.Api;
 import com.rpg.general.directory.Crud;
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(Api.country)
-public class CountryController extends CrudApi<Country> {
-    public CountryController(Crud<Country> crud) {
+@RequestMapping(Api.fraction)
+public class FractionController extends CrudApi<Fraction> {
+    public FractionController(Crud<Fraction> crud) {
         super(crud);
     }
 }

@@ -8,7 +8,7 @@ public class Api {
     private static final String api = "/api";
     public static final String person = api + "/person";
     public static final String biography = api + "/biography";
-    public static final String country = api + "/country";
+    public static final String fraction = api + "/fraction";
     public static final String resource = api + "/resource";
 
     public class Resource {

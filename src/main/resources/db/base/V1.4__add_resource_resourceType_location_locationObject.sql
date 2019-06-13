@@ -17,7 +17,7 @@ create table location (
   id bigserial not null primary key,
   name varchar not null,
   description varchar not null,
-  country_id bigint references country(id)
+  fraction_id bigint references fraction(id)
 );
 
 create table location_object (

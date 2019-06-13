@@ -1,6 +1,6 @@
 package com.rpg.directory.biography;
 
-import com.rpg.directory.country.Country;
+import com.rpg.directory.fraction.Fraction;
 import com.rpg.directory.person.Person;
 import com.rpg.general.directory.Model;
 
@@ -16,5 +16,5 @@ public class Biography extends Model {
     public Person person;
 
     @ManyToOne
-    public Country homeland;
+    public Fraction homeland;
 }

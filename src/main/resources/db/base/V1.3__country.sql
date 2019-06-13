@@ -1,7 +1,7 @@
-create table country (
+create table fraction (
     id bigserial not null primary key,
     name varchar not null,
     description varchar not null
 );
 
-alter table biography add column homeland_id bigint references country(id);
+alter table biography add column homeland_id bigint references fraction(id);

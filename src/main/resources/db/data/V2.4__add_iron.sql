@@ -4,9 +4,9 @@ VALUES ('Металлы', 'Металы прочные материалы хор
 INSERT INTO resource (name, description, density, rarity, type_id)
 VALUES ('железо', 'Один из самых распространненых металов', 200, 20, 1);
 
-INSERT INTO rpg.location (name, description, country_id)
+INSERT INTO location (name, description, fraction_id)
 VALUES ('Лесок', 'Небольшой лес', 1);
-INSERT INTO rpg.location (name, description, country_id)
+INSERT INTO location (name, description, fraction_id)
 VALUES ('Деревня Рори', 'Небольшая деревня', 1);
-INSERT INTO rpg.resource (name, description, density, rarity, type_id)
+INSERT INTO resource (name, description, density, rarity, type_id)
 VALUES ('Свинец', 'Тяжелый метал', 600, 15, 1);
