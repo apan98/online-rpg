@@ -18,6 +18,8 @@ public class Api {
     public static final String location = api + "/location";
     public class Location {
         public static final String object = location + "/object";
+        public static final String generate = location + "/generate";
     }
+
 
 }
